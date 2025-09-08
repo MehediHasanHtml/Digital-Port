@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+@custom-variant dark (&:where(.dark, .dark *));
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    font-family: "Raleway", sans-serif;
+}
+
+:root {
+    --primary: #000;
+    --secondary: #20B15A;
+    --success: #20B15A;
+    --info: #000;
+    --warning: #F55F1D;
+    --error: #FF1414;
+    --bggreen: #D7F5DC;
+    --bgwhite: #fff;
+    --textcolor: #130F26;
+    --bglight: #FAFFFB;
+}
+
+.dark {
+    --primary: #fff;
+    --secondary: #20B15A;
+    --success: #20B15A;
+    --info: #fff;
+    --warning: #F55F1D;
+    --error: #FF1414;
+    --bggreen: #0f172b;
+    --bgwhite: #0f172b;
+    --textcolor: #fff;
+    --bglight: #1d293d;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
