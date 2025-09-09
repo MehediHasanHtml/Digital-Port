@@ -14,10 +14,10 @@ const islight = computed(() => mode.value === 'light')
                 <img v-if="islight" src="/img//logo-dark.png" alt="Digital Port Logo Dark" class="h-9 mb-6" />
                   <img v-else  src="/img//logo-light.png"  alt="Digital Port Logo Light" class="h-9 mb-6" />
 
-                <p class="text-sm md:base font-semibold text(--textcolor) mb-4 max-w-sm">Some footer text about the  Agency. Just a little description to help people understand you better</p>
+                <p class="text-sm md:base font-semibold text(--textcolor) mb-3 max-w-sm">Some footer text about the  Agency. Just a little description to help people understand you better</p>
             </div>
             <div class="foo mb-4">
-                <h4 class="text-sm md:text-lg font-bold text(--textcolor) mb-4">Quick Links</h4>
+                <h4 class="text-sm md:text-lg font-bold text(--textcolor) mb-3">Quick Links</h4>
                 <ul>
                     <li><a href="#" class="text-sm md:base font-semibold text(--textcolor) mb-1 inline-block">Services</a></li>
                     <li><a href="#" class="text-sm md:base font-semibold text(--textcolor) mb-1 inline-block">Portfolio</a></li>
@@ -26,8 +26,8 @@ const islight = computed(() => mode.value === 'light')
                 </ul>
             </div>
             <div class="foo mb-4">
-                <h4 class="text-sm md:text-lg font-bold text(--textcolor) mb-4">Address</h4>
-                <p class="text-sm md:base font-semibold text(--textcolor) mb-4 max-w-sm">Design Agency Head Office. <br> Airport Road</p>
+                <h4 class="text-sm md:text-lg font-bold text(--textcolor) mb-3">Address</h4>
+                <p class="text-sm md:base font-semibold text(--textcolor) mb-3 max-w-sm">Design Agency Head Office. <br> Airport Road</p>
                 
                 <div class="links">
                     <UButton icon="i-simple-icons-facebook" color="neutral" variant="ghost" target="_blank" aria-label="facebook" />

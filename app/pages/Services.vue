@@ -1,30 +1,13 @@
 <script setup lang="ts">
-import {ref, reactive} from 'vue'
-import CountUp from '~/components/CountUp.vue'
-import Footer from '~/components/Footer.vue'
-
+import Header from '~/components/Header.vue';
+import Footer from '~/components/Footer.vue';
 
 useSeoMeta({
-  title: 'Home | Digital Port with Nuxt - Tailwind',
-  ogTitle: 'Home | Digital Port with Nuxt - Tailwind',
+  title: 'Services | Digital Port with Nuxt - Tailwind',
+  ogTitle: 'Services | Digital Port with Nuxt - Tailwind',
   description: 'Mehedi Hasan - Frontend developer - Fully responsive across all devices, Tailwind CSS for modern UI and performance, Smooth animations, dark mode & reusable components',
   ogDescription: 'Mehedi Hasan - Frontend developer - Fully responsive across all devices, Tailwind CSS for modern UI and performance, Smooth animations, dark mode & reusable components',
 })
-
-
-const logos = [
-  '/img/logos_google.png',
-  '/img/Trello-logo-blue 1.png',
-  '/img/logos_monday.png',
-  '/img/Notion.png',
-  '/img/Slack.png',
-  '/img/logos_google.png',
-  '/img/Trello-logo-blue 1.png',
-  '/img/logos_monday.png',
-  '/img/Notion.png',
-  '/img/Slack.png',
-]
-
 
 
 
@@ -103,120 +86,13 @@ const testi = ref([
     },
 ])
 
-
-
 const Subscribe = ref('')
+
 
 </script>
 
-
 <template>
-
-<section class="hero-banner py-6 bg-(--bggreen) min-h-[calc(100vh-64px)]">
-    <UContainer class="max-w-[1440px]">
-      <div class="grid grid-flow-row grid-cols-1 lg:grid-cols-2 gap-3">
-        <div class="flex items-center mt-3 md:mt-6 lg:mt-8">
-          <div class="heading">
-            <h1 class="text-xl md:text-3xl xl:text-5xl font-black text-(--primary) mb-3">Increase Your Customers Loyalty and Satisfaction</h1>
-            <p class="text-sm md:text-base text-(--textcolor) mb-5">We help businesses like yours earn more customers, standout from competitors,  make more money</p>
-            <UButton label="Get Started" color="primary" size="lg" class="text-base font-bold px-6 py-3 rounded-lg w-full md:w-auto justify-center"/>
-          </div>
-        </div>
-        <div class="flex items-center mt-3 md:mt-6 lg:mt-8">
-          <div class="heading">
-            <img src="/img/hero.png" alt="hero" class="w-auto">
-          </div>
-        </div>
-      </div>
-    </UContainer>
-    
-      <!-- logos -->
-       <div class=" py-4 md:py-6 bg-[#F8FFF9]">
-        <UCarousel
-        v-slot="{ item }"
-        loop
-        auto-scroll
-        :items="logos"
-        :ui="{ item: 'basis-1/2 md:basis-1/3 lg:basis-1/5' }"
-      >
-        <img :src="item" class="rounded-lg m-auto h-auto ">
-      </UCarousel>
-      </div>
-      <!-- logos -->
-</section>
-
-
-
-<!-- What we do -->
-<section class="py-12 bg-(--bgwhite)">
-    <UContainer class="max-w-[1440px]">
-        <div class="title max-w-xl mb-15">
-            <p class="text-sm md:text-lg text-(--secondary) font-semibold mb-3">What we do</p>
-            <h2 class="text-lg md:text-3xl lg:text-4xl text-(--primary) font-bold mb-3">We provide the Perfect Solution to your business growth</h2>
-        </div>
-        <div class="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-15">
-            <div class="icons">
-                <div class="bg-green-100 h-16 w-16 rounded-2xl flex items-center justify-center mb-4">
-                    <UIcon name="i-lucide-chart-no-axes-combined" class="size-6 dark:text-(--bgwhite)" />
-                </div>
-                <h3 class="text-sm md:text-base lg:text-2xl font-bold text-(--primary) mb-3">Grow Your Business</h3>
-                <p class="text-sm md:text-base font-semibold text-(--textcolor) mb-4">We help identify the best ways to improve your business</p>
-                <UButton trailing-icon="i-lucide-arrow-right" variant="ghost" color="neutral" size="md">Learn More</UButton>
-            </div>
-            
-            <div class="icons">
-                <div class="bg-green-100 h-16 w-16 rounded-2xl flex items-center justify-center mb-4">
-                    <UIcon name="i-lucide-heart-plus" class="size-6 dark:text-(--bgwhite)" />
-                </div>
-                <h3 class="text-sm md:text-base lg:text-2xl font-bold text-(--primary) mb-3">Improve brand loyalty</h3>
-                <p class="text-sm md:text-base font-semibold text-(--textcolor) mb-4">We help identify the best ways to improve your business</p>
-                <UButton trailing-icon="i-lucide-arrow-right" variant="ghost" color="neutral" size="md">Learn More</UButton>
-            </div>
-            <div class="icons">
-                <div class="bg-green-100 h-16 w-16 rounded-2xl flex items-center justify-center mb-4">
-                    <UIcon name="i-lucide-briefcase-business" class="size-6 dark:text-(--bgwhite)" />
-                </div>
-                <h3 class="text-sm md:text-base lg:text-2xl font-bold text-(--primary) mb-3">Improve Business Model</h3>
-                <p class="text-sm md:text-base font-semibold text-(--textcolor) mb-4">We help identify the best ways to improve your business</p>
-                <UButton trailing-icon="i-lucide-arrow-right" variant="ghost" color="neutral" size="md">Learn More</UButton>
-            </div>
-        </div>
-    </UContainer>
-</section>
-<!-- What we do -->
-
-<!-- complate projects -->
-<section class="complate-projects py-12 bg-(--bglight)">
-    <UContainer class="max-w-[1440px]">
-        <div class="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:divide-x-2 divide-gray-200 gap-3 p-4 md:p-8 lg:p-10">
-            <div class="projext mb-4 p-4 md:p-6 text-center">
-                <UIcon name="i-lucide-folder-git-2" class="size-8 md:size-14 lg:size-20 mb-3" />
-                <p  class="text-sm md:text-base font-semibold text-(--textcolor) mb-2">Completed Projects</p>
-                <h2  class="text-xl md:text-2xl lg:text-3xl xl:text-5xl font-semibold text-(--secondary) mb-4"> <CountUp :end="200" :duration="2500" />+</h2>
-            </div>
-            <div class="projext mb-4 p-4 md:p-6 text-center">
-                <UIcon name="i-lucide-users" class="size-8 md:size-14 lg:size-20 mb-3" />
-                <p  class="text-sm md:text-base font-semibold text-(--textcolor) mb-2">Customer Satisfaction</p>
-                <h2  class="text-xl md:text-2xl lg:text-3xl xl:text-5xl font-semibold text-(--secondary) mb-4"> <CountUp :end="100" :duration="2500" />%</h2>
-            </div>
-           
-            <div class="projext mb-4 p-4 md:p-6 text-center">
-                <UIcon name="i-lucide-badge-cent" class="size-8 md:size-14 lg:size-20 mb-3" />
-                <p  class="text-sm md:text-base font-semibold text-(--textcolor) mb-2">Raised by Clients</p>
-                <h2  class="text-xl md:text-2xl lg:text-3xl xl:text-5xl font-semibold text-(--secondary) mb-4">$<CountUp :end="20" :duration="2500" />m</h2>
-            </div>
-           
-            <div class="projext mb-4 p-4 md:p-6 text-center">
-                <UIcon name="i-lucide-calendar-clock" class="size-8 md:size-14 lg:size-20 mb-3" />
-                <p  class="text-sm md:text-base font-semibold text-(--textcolor) mb-2">Years in Business</p>
-                <h2  class="text-xl md:text-2xl lg:text-3xl xl:text-5xl font-semibold text-(--secondary) mb-4"><CountUp :end="10" :duration="2500" />yrs</h2>
-            </div>
-           
-        </div>
-    </UContainer>
-</section>
-<!-- complate projects -->
-
+<Header/>
 
 <!-- Our Portfolio -->
 <section class="ourportfolio py-12">
@@ -296,7 +172,5 @@ const Subscribe = ref('')
 </section>
 <!-- Subscribe -->
 
-
 <Footer/>
-
 </template>
